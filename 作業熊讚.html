@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        /* 太極 */
+        .taichi {
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    /* 太極大白圓 */
+    .taichi::before {
+      content: '';
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 40%;
+      right: -10%;
+    }
+
+    /* 太極大黑圓 */
+    .taichi::after {
+      content: '';
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 40%;
+      left: -10%;
+    }
+
+    /* 陰陽 */
+    .yinyang {
+      border-radius: 50%;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: white;
+      border-radius: 50%;
+      width: 250px;
+      height: 150px;
+      z-index: 99;
+    }
+
+    .yinyang::before {
+      content: '';
+      width: 65px;
+      height: 40px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 25%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      transform: translate(0, -50%);
+    }
+
+
+    .yinyang::after {
+      content: '';
+      width: 95px;
+      height: 40px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 25%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      transform: translate(0, 50%);
+      z-index: 1;
+    }
+        /* 眼白 */
+        .eyeswhite {
+      border-radius: 50%;
+      position: absolute;
+      top: -80%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .eyeswhite::before {
+        content: '';
+      width: 120px;
+      height: 120px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 40%;
+      right: -30%;
+    }
+
+
+    .eyeswhite::after {
+        content: '';
+        width: 120px;
+      height: 120px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 40%;
+      left: -30%;
+      z-index: 98;
+    }
+
+            /* 眼黑 */
+    .eyesblack {
+      border-radius: 50%;
+      position: absolute;
+      height: 100px;
+      width: 260px;
+      top: 0%;
+      left: 0;
+      right: 0;
+    }
+
+    .eyesblack::before {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      right: -21%;
+    }
+
+
+    .eyesblack::after {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      left: -25%;
+      z-index: 99;
+    }
+            /* 耳黑 */
+      .earwhite {
+      border-radius: 50%;
+      position: absolute;
+      top: -140%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+    }
+
+    .earwhite::before {
+        content: '';
+      width: 120px;
+      height: 120px;
+      background-color:black ;
+      border-radius: 50%;
+      position: absolute;
+      top: -10%;
+      right: -130%;
+    }
+
+
+    .earwhite::after {
+        content: '';
+        width: 120px;
+      height: 120px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: -10%;
+      left: -130%;
+      z-index: 98;
+    }
+                /* 耳黑 */
+      .earblack {
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+
+    .earblack::before {
+        content: '';
+      width: 90px;
+      height: 90px;
+      background-color:white ;
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+      right: -150%;
+    }
+
+
+    .earblack::after {
+        content: '';
+        width: 90px;
+      height: 90px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+      left: -150%;
+      z-index: 99;
+    }
+    
+    .v {
+      position: absolute;
+      bottom: -450%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 100px;
+      width: 100px;
+    }
+
+    .v::before {
+        content: '';
+      width: 80px;
+      height: 105px;
+      background-color:white ;
+      position: absolute;
+      top: 0%;
+      right: -40%;
+      transform: skewX(315deg);
+    }
+
+
+    .v::after {
+        content: '';
+        width: 80px;
+      height: 105px;
+      background-color: white;
+      position: absolute;
+      top: 0%;
+      left: -40%;
+      z-index: 99;
+      transform: skewX(45deg);
+    }
+</style>
+<body>
+    <div class="taichi">
+        <div class="yinyang"><div class="eyeswhite"><div class="eyesblack"><div class="earwhite"><div class="earblack"><div class="v"></div></div></div></div></div>
+      </div>
+    </body>
+</body>
+</html>

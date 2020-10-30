@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 950px;
+        overflow: hidden;
+        font-family: '標楷體';
+        font-weight: bolder;
+     } 
+    .outside{
+        width: 750px;
+        height: 930px;
+        border: black 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .small{
+        height: 80px;
+        width: 80px;
+        border: black 1px solid;
+        position: relative;
+        
+    }
+    .content{
+        width: 660px;
+        height: 730px;
+        display: flex;
+        flex-wrap: wrap;
+        /* align-items: flex-start; */
+    }
+    .centerbox{
+        width: 655px;
+        height: 80px;
+        border: black 1px solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 50px;
+        line-height: 80px;
+    }
+
+
+.chess {
+ position: absolute;
+ border: 2px solid #000;
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ z-index: 100;
+ left: -30%;
+ top: -25%;
+ background-color: white;
+ font-size: 40px;
+ text-align: center;
+ line-height: 50px;
+ z-index: 99;
+}
+.car {
+    position: absolute;
+ border: 2px solid #000;
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ z-index: 100;
+ right: -35%;
+ top: -25%;
+ background-color: white;
+ font-size: 40px;
+ text-align: center;
+ line-height: 50px;
+ 
+}
+.chess2 {
+ position: absolute;
+ border: 2px solid black;
+ color:  rgb(255, 0, 0);
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ z-index: 100;
+ left: -30%;
+ bottom: -25%;
+ background-color: white;
+ font-size: 40px;
+ text-align: center;
+ line-height: 50px;
+ 
+}
+.car2 {
+    position: absolute;
+ border: 2px solid black;
+ color:  rgb(255, 0, 0);
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ z-index: 100;
+ right: -35%;
+ bottom: -25%;
+ background-color: white;
+ font-size: 40px;
+ text-align: center;
+ line-height: 50px;
+}
+.rightsolider
+{
+    position: absolute;
+ border: 2px solid black;
+ color:  black;
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ z-index: 100;
+ right: -35%;
+ top: -25%;
+ background-color: white;
+ font-size: 40px;
+ text-align: center;
+ line-height: 50px;
+}
+.rightsolider2
+{
+    position: absolute;
+ border: 2px solid black;
+ color:  rgb(255, 0, 0);
+ height: 50px;
+ width: 50px;
+ border-radius: 50%;
+ z-index: 100;
+ right: -35%;
+ bottom: -25%;
+ background-color: white;
+ font-size: 40px;
+ text-align: center;
+ line-height: 50px;
+}
+.line{
+    position: absolute;
+    top: 38%;
+    left: -40%;
+    width: 0.5px;
+    height: 78px;
+    transform: skewX(45deg);
+    border: 1px solid black;
+    background-color: black;
+    z-index: -1;
+}
+.line2{
+    position: absolute;
+    top: 0%;
+    left: -55%;
+    width: 0.5px;
+    height: 78px;
+    transform: skewX(315deg);
+    border: 1px solid black;
+    background-color: black;
+    z-index: -1;
+}
+.redline{
+    position: absolute;
+    top:0%;
+    left: -55%;
+    width: 0.5px;
+    height: 78px;
+    transform: skewX(45deg);
+    border: 1px solid black;
+    background-color: black;
+    z-index: -1;
+}
+.redline2{
+    position: absolute;
+    top:0%;
+    left: -55%;
+    width: 0.5px;
+    height: 78px;
+    transform: skewX(315deg);
+    border: 1px solid black;
+    background-color: black;
+    z-index: -1;
+}
+.line3{
+    position: absolute;
+    top: 0%;
+    left: -55%;
+    width: 0.5px;
+    height: 78px;
+    transform: skewX(135deg);
+    border: 1px solid black;
+    background-color: black;
+    z-index: -1;
+}
+.line4{
+    position: absolute;
+    top: 0%;
+    left: -55%;
+    width: 0.5px;
+    height: 78px;
+    transform: skewX(225deg);
+    border: 1px solid black;
+    background-color: black;
+    z-index: -1;
+}
+
+</style>
+<body>
+    <div style="-webkit-writing-mode: vertical-lr;font-size: 45px;height: 930px;width: 80px;">棋盤裡，車無輪，馬無韁，叫聲將軍堤防堤防</div>
+    <div class="outside">
+    <div class="content">
+        <tr>
+            <div class="small"><div class='chess'>車</div></div>
+            <div class="small"><div class='chess'>馬</div></div>
+            <div class="small"><div class='chess'>象</div></div>
+            <div class="small"><div class='chess' style="z-index: 9999;">士</div></div>
+            <div class="small"><div class='chess'>將<div class="line"></div></div></div>
+            <div class="small"><div class='chess' style="z-index: 9999;">士</div><div class="line2"></div></div>
+            <div class="small"><div class='chess'>象</div></div>
+            <div class="small"><div class='chess'>馬</div><div class='car'>車</div></div>
+        </tr>
+        <tr>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"><div class="line3"></div></div>
+            <div class="small"><div class="line4"></div></div>
+            <div class="small"></div>
+            <div class="small"></div>
+        </tr>
+        <tr>
+            <div class="small"></div>
+            <div class="small"><div class='chess'>包</div></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess'>包</div></div>
+        </tr>
+        <tr>
+            <div class="small"><div class='chess'>卒</div></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess'>卒</div></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess'>卒</div></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess'>卒</div></div>
+            <div class="small"><div class='rightsolider'>卒</div></div>
+        </tr>
+        <tr>
+            <div class="centerbox"><div class="centerword">楚河</div><div class="centerword">漢界</div></div>
+        </tr>
+        <tr>
+            <div class="small"><div class='chess2'>兵</div></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess2'>兵</div></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess2'>兵</div></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess2'>兵</div></div>
+            <div class="small"><div class='rightsolider2'>兵</div></div>
+        </tr>
+        <tr>
+            <div class="small"></div>
+            <div class="small"><div class='chess2''>炮</div></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"><div class='chess2'>炮</div></div>
+        </tr>
+        <tr>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"><div class="line4"></div></div>
+            <div class="small"><div class="line3"></div></div>
+            <div class="small"></div>
+            <div class="small"></div>
+        </tr>
+        <tr>
+            <div class="small"><div class='chess2'>俥</div></div>
+            <div class="small"><div class='chess2'>傌</div></div>
+            <div class="small"><div class='chess2'>像</div></div>
+            <div class="small"><div class='chess2'>仕</div></div>
+            <div class="small"><div class='chess2'>帥</div><div class="redline2"></div></div>
+            <div class="small"><div class='chess2'>仕</div><div class="redline"></div></div>
+            <div class="small"><div class='chess2'>像</div></div>
+            <div class="small"><div class='chess2'>傌</div><div class='car2'>俥</div></div>
+        </tr>
+    </div></div>
+    <div style="-webkit-writing-mode: vertical-lr;font-size: 45px;height: 930px;width: 80px;line-height: 80px;">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</div>
+</body>
+</html>

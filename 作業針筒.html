@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        .outside {
+      width: 1000px;
+      height: 200px;
+      background:rgb(255, 255, 255);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 99;
+    }
+    /* 太極 */
+    .taichi {
+      width: 100px;
+      height: 200px;
+      background:black;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 99;
+    }
+
+    /* 太極大白圓 */
+    .taichi::before {
+      content: 'Made in Taiwan';
+      width: 500px;
+      height: 200px;
+      border:lightgray 1px solid;
+      background:linear-gradient(180deg, white 15%, rgba(160, 160, 160, 0.479) 66%, white 100%);
+      position: absolute;
+      top: 0;
+      right: 100%;
+      color: grey;
+      font-size: 50px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    /* 太極大黑圓 */
+    .taichi::after {
+      content: '';
+      width: 500px;
+      height: 200px;
+      background:linear-gradient(180deg, rgb(246, 255, 222) 15%, rgba(160, 160, 160, 0.479) 66%, rgb(246, 255, 222) 100%);
+      border: lightgray 1px solid;
+      position: absolute;
+      bottom: 0;
+      left: 100%
+
+    }
+
+    陰陽
+    .yinyang {
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .yinyang::before {
+      content: '';
+      width: 100px;
+      height: 130px;
+      border-radius: 0% 10% 10% 0;
+      background:linear-gradient(180deg, white 15%, rgba(160, 160, 160, 0.479) 66%, white 100%);
+      position: absolute;
+      top: 50%;
+      left: 600%;
+      margin: auto;
+      transform: translate(0, -50%);
+      z-index: 99;
+      border:lightgray 1px solid;
+
+    }
+
+
+    .yinyang::after {
+      content: '';
+      width: 100px;
+      height: 130px;
+      background:linear-gradient(180deg, white 15%, rgba(160, 160, 160, 0.479) 66%, white 100%);
+      position: absolute;
+      bottom: 50%;
+      right: 600%;
+      margin: auto;
+      transform: translate(0, 50%);
+      z-index: 99;
+      border:lightgray 1px solid;
+
+    }
+    兩邊
+    .side {
+      
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .side::before {
+      content: '';
+      width: 100px;
+      height: 1px;
+      border-radius: 0% 10% 10% 0;
+      background:linear-gradient(180deg, white 15%, rgba(160, 160, 160, 0.479) 66%, white 100%);
+      position: absolute;
+      top: 50%;
+      left: 700%;
+      margin: auto;
+      transform: translate(0, -50%);
+      z-index: 99;
+      border:lightgray 1px solid;
+
+    }
+
+
+    .side::after {
+      content: '';
+      width: 100px;
+      height: 200px;
+      background:linear-gradient(180deg, white 15%, rgba(160, 160, 160, 0.479) 66%, white 100%);
+      border:lightgray 1px solid;
+      position: absolute;
+      bottom: 50%;
+      right: 700%;
+      margin: auto;
+      transform: translate(0, 50%);
+      z-index: 99;
+      border-radius: 20%;
+    }
+    刻度
+    .ruler {
+ position: relative;
+ width: 100%;
+ margin: 20px auto;
+ height: 14px;
+ z-index: 100;
+}
+.ruler .cm,
+.ruler .mm {
+ position: absolute;
+ border-left: 1px solid #000;
+ height: 25px;
+ width: 10%;
+ z-index: 100;
+}
+.ruler .cm:after {
+ position: absolute;
+ bottom: -15px;
+ font: 11px/1 sans-serif;
+}
+.ruler .mm {
+ height: 20px;
+}
+.ruler .mm:nth-of-type(5) {
+ height: 10px;
+}
+.ruler .cm:nth-of-type(1) {
+ left: 0%;
+}
+.ruler .cm:nth-of-type(2) {
+ left: 13.5%;
+}
+
+.ruler .cm:nth-of-type(3) {
+ left: 27%;
+}
+
+.ruler .cm:nth-of-type(4) {
+ left: 40.5%;
+}
+
+.ruler .cm:nth-of-type(5) {
+ left: 54%;
+}
+
+.ruler .cm:nth-of-type(6) {
+ left: 67.5%;
+}
+
+ .ruler .cm:nth-of-type(7) {
+ left: 81%;
+} 
+
+.ruler .cm:nth-of-type(8) {
+ left: 94.5%;
+}
+/* 
+.ruler .cm:nth-of-type(9) {
+ left: 80%;
+}
+
+.ruler .cm:nth-of-type(10) {
+ left: 90%;
+} */
+
+.ruler .mm:nth-of-type(1) {
+ left: 33%;
+}
+.ruler .mm:nth-of-type(2) {
+ left: 66%;
+}
+.ruler .mm:nth-of-type(3) {
+ left: 100%;
+}
+/* .ruler .mm:nth-of-type(4) {
+ left: 40%;
+}
+.ruler .mm:nth-of-type(5) {
+ left: 50%;
+}
+.ruler .mm:nth-of-type(6) {
+ left: 60%;
+}
+.ruler .mm:nth-of-type(7) {
+ left: 70%;
+}
+.ruler .mm:nth-of-type(8) {
+ left: 80%;
+}
+.ruler .mm:nth-of-type(9) {
+ left: 90%;
+}
+.ruler .mm:nth-of-type(10) {
+ left: 100%; */
+/* } */
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="outside">
+  <div class="taichi">
+    <div class="yinyang"><div class="side">  
+    </div></div></div>     
+    <div class='ruler'>
+      <div class='cm'>
+      <div class='mm'></div>
+      <div class='mm'></div>
+      <div class='mm'></div>
+      </div>
+      <div class='cm'>
+        <div class='mm'></div>
+        <div class='mm'></div>
+        <div class='mm'></div>
+        </div>
+      <div class='cm'>
+        <div class='mm'></div>
+        <div class='mm'></div>
+        <div class='mm'></div>
+      </div>
+      <div class='cm'>
+        <div class='mm'></div>
+        <div class='mm'></div>
+        <div class='mm'></div>
+        </div>
+        <div class='cm'>
+          <div class='mm'></div>
+          <div class='mm'></div>
+          <div class='mm'></div>
+          </div>
+        <div class='cm'>
+          <div class='mm'></div>
+          <div class='mm'></div>
+          <div class='mm'></div>
+        </div>
+        <div class='cm'>
+          <div class='mm'></div>
+          <div class='mm'></div>
+          <div class='mm'></div>
+        </div>
+        <div class='cm'>
+          <div class='mm'></div>
+          <div class='mm'></div>
+        </div>
+  </div>
+</body>
+
+</html>
